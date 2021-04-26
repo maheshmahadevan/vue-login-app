@@ -1,26 +1,55 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <NavBar></NavBar>
+
+  <main>
+    <SideNav/>
+    <router-view />
+  </main>
+  <Footer></Footer>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import M from "materialize-css";
+import NavBar from "@/components/NavBar.vue";
+import Footer from "@/components/Footer.vue";
+import SideNav from '@/components/SideNav'
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    NavBar,
+    Footer,
+    SideNav
+  },
+  methods: {
+    login() {
+      this.$auth.loginWithRedirect();
+    },
+    // Log the user out
+    logout() {
+      this.$auth.logout({
+        returnTo: window.location.origin,
+      });
+    },
+  },
+  mounted() {
+    M.AutoInit();
+  },
+};
 </script>
 
 <style>
+
+
+/** This is required to keep footer down */
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
+
+main {
+  flex: 1 0 auto;
+}
+/** This is required to keep footer down */
 </style>
