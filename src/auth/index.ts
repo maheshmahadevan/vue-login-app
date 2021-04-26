@@ -1,3 +1,8 @@
+/**
+ * Credits - Based on the work done by 
+ * https://github.com/lstyles/vue3-auth0-sample.git
+ */
+
 import createAuth0Client, { Auth0Client, Auth0ClientOptions, GetIdTokenClaimsOptions, GetTokenSilentlyOptions, GetTokenWithPopupOptions, LogoutOptions, RedirectLoginOptions,User } from '@auth0/auth0-spa-js'
 import { computed, reactive, watchEffect } from 'vue'
 import { RouteLocationRaw } from 'vue-router';

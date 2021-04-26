@@ -10,19 +10,22 @@
           <a @click="logout">Logout</a>
         </li>
         <li class="divider"></li>
-        <li><a href="#!">Profile</a></li>
+        <li><router-link v-if="$auth.isAuthenticated.value" to="/profile">
+            Profile
+            </router-link>
+        </li>
       </ul>
       <nav>
         <div class="nav-wrapper teal lighten-2">
           <a href="#" class="brand-logo center">App</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li>
-              <router-link to="/"
+              <router-link v-if="$auth.isAuthenticated.value" to="/"
                 ><i class="material-icons">home</i></router-link
               >
             </li>
             <li>
-              <router-link to="/about"
+              <router-link v-if="$auth.isAuthenticated.value" to="/about"
                 ><i class="material-icons">view_module</i></router-link
               >
             </li>

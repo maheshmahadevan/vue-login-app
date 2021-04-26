@@ -1,0 +1,5 @@
+{
+    "domain": <YOUR_DOMAIN>,
+    "client_id": <YOUR_CLIENT_ID>,
+    "redirect_uri": <YOUR_REDIRECT_URI>
+}
