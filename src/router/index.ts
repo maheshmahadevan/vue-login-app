@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 //import Home from '../views/Home.vue'
 import Main from '../views/Main.vue';
 import Profile from '../views/Profile.vue';
+import ExternalApiView from '../views/ExternalApi.vue';
 import {routeGuard} from '../auth/index';
 
 const routes: Array<RouteRecordRaw> = [
@@ -24,6 +25,12 @@ const routes: Array<RouteRecordRaw> = [
     path: '/profile',
     name: 'Profile',
     component: Profile,
+    beforeEnter: routeGuard
+  },
+  {
+    path: '/external-api',
+    name: 'external-api',
+    component: ExternalApiView,
     beforeEnter: routeGuard
   }
 ]

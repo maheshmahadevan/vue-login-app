@@ -8,7 +8,7 @@
       <a href="#name"><span class="white-text name">{{ $auth.user.value.name }}</span></a>
       <a href="#email"><span class="white-text email">{{ $auth.user.value.email }}</span></a>
     </div></li>
-    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+    <li><router-link to="/external-api"><i class="material-icons">cloud</i>External Api</router-link></li>
     <li><a href="#!">Second Link</a></li>
     <li><div class="divider"></div></li>
     <li><a class="subheader">Subheader</a></li>

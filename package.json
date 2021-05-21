@@ -10,6 +10,7 @@
   "dependencies": {
     "@auth0/auth0-spa-js": "^1.14.0",
     "@vue/composition-api": "^1.0.0-rc.7",
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "material-icons": "^0.6.1",
     "materialize-css": "^1.0.0-rc.2",
